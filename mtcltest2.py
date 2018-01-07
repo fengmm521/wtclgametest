@@ -11,9 +11,9 @@ import random
 onumbers = {1:[0,'g'],2:[26,'b'],3:[3,'r'],4:[35,'b'],5:[12,'r'],6:[28,'b'],7:[7,'r'],8:[29,'b'],9:[18,'r'],10:[22,'b'],11:[9,'r'],12:[31,'b'],13:[14,'r'],14:[20,'b'],15:[1,'r'],16:[33,'b'],17:[16,'r'],18:[24,'b'],19:[5,'r'],20:[10,'b'],21:[23,'r'],22:[8,'b'],23:[30,'r'],24:[11,'b'],25:[36,'r'],26:[13,'b'],27:[27,'r'],28:[6,'b'],29:[34,'r'],30:[17,'b'],31:[25,'r'],32:[2,'b'],33:[21,'r'],34:[4,'b'],35:[19,'r'],36:[15,'b'],37:[32,'r']}
 
 
-playertimes = 10000
+playertimes = 1000
 
-startscore = 30000
+startscore = 3000
 
 
 scroe = startscore
@@ -24,7 +24,7 @@ startlist = [1,2,3]
 
 limit = 300
 
-onethrow = 5
+onethrow = 10
 
 rcount = 0
 bcount = 0
@@ -54,13 +54,13 @@ for i in range(playertimes):
             value = onumbers[tmp][0]
             color = onumbers[tmp][1]
 
-            # if color != gamecolor:
-            #     clortmpcount += 1
-            #     if clortmpcount < ccount:
-            #         print 'yyy'
-            #         continue
-            #     else:
-            #         clortmpcount = 0
+            if color != gamecolor:
+                clortmpcount += 1
+                if clortmpcount < ccount:
+                    print 'yyy'
+                    continue
+                else:
+                    clortmpcount = 0
 
 
 
