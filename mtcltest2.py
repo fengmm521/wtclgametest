@@ -11,7 +11,7 @@ import random
 onumbers = {1:[0,'g'],2:[26,'b'],3:[3,'r'],4:[35,'b'],5:[12,'r'],6:[28,'b'],7:[7,'r'],8:[29,'b'],9:[18,'r'],10:[22,'b'],11:[9,'r'],12:[31,'b'],13:[14,'r'],14:[20,'b'],15:[1,'r'],16:[33,'b'],17:[16,'r'],18:[24,'b'],19:[5,'r'],20:[10,'b'],21:[23,'r'],22:[8,'b'],23:[30,'r'],24:[11,'b'],25:[36,'r'],26:[13,'b'],27:[27,'r'],28:[6,'b'],29:[34,'r'],30:[17,'b'],31:[25,'r'],32:[2,'b'],33:[21,'r'],34:[4,'b'],35:[19,'r'],36:[15,'b'],37:[32,'r']}
 
 
-playertimes = 1000
+playertimes = 10000
 
 startscore = 3000
 
@@ -20,7 +20,9 @@ scroe = startscore
 
 gamecolor = 'b'
 
-startlist = [1,2,3]
+baselist = [2,3,4]
+
+startlist = list(baselist)
 
 limit = 300
 
@@ -116,7 +118,7 @@ for i in range(playertimes):
         print 'lossscore',scoretmp - scroe
 
     if len(startlist) <= 1:
-        startlist = [1,2,3]
+        startlist = list(baselist)
         tmpx = random.randint(0, 1)
         print 's',startlist
         
